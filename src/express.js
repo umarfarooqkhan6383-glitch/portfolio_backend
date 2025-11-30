@@ -10,10 +10,11 @@ const app = express();
 
 // ✅ Enable CORS
 app.use(cors({
-  origin: "http://localhost:5173", // sirf frontend origin allow hoga
-  methods: ["GET", "POST", "PUT", "DELETE"], 
+  origin: ["http://localhost:5173", "https://my-portfolio-mu-khaki-27.vercel.app"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 
 // Middleware
 app.use(express.json());

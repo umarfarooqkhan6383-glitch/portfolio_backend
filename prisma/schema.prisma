@@ -18,10 +18,10 @@ datasource db {
 
 model Student {
   id String @id @default(auto()) @map("_id") @db.ObjectId()
-  username String @unique
+  username String 
   email String @unique
-  password String  @unique
-  gender String  
+  subject String 
+  message String  
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   @@map("students")
