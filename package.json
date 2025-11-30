@@ -7,8 +7,10 @@
   "type": "module",
   "main": "express.js",
   "scripts": {
-    "dev": "nodemon src/express.js"
-  },
+  "dev": "nodemon src/express.js",
+  "start": "node src/express.js"
+},
+
   "dependencies": {
     "@prisma/client": "^6.15.0",
     "cors": "^2.8.5",
