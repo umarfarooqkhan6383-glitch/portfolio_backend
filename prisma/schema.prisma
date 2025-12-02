@@ -27,3 +27,14 @@ model Student {
   @@map("students")
 }
 
+model Hire{
+  id String @id @default(auto()) @map("_id") @db.ObjectId()
+  name String  
+  email String @unique
+  project String
+  description String 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@map("hires")
+}
+

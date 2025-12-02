@@ -5,7 +5,7 @@ import { config } from "./config/config.js";
 
 // Routes import
 import { student_router } from "./routes/studentRoutes.js";
-
+import { hiremeRouter } from "./routes/studentRoutes.js";
 const app = express();
 
 // ✅ Enable CORS
@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 
 // Routes
 app.use("/api/v1", student_router);
-
+app.use("/api/v1", hiremeRouter);
 // Start server
 app.listen(3000, () => {
   console.log(`🚀 Server running on http://localhost:3000`);
