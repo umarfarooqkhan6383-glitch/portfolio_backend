@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "Student App",
   "license": "ISC",
-  "author": "",
   "type": "module",
-  "main": "express.js",
+  "main": "src/express.js",
   "scripts": {
-  "dev": "nodemon src/express.js",
-  "start": "node src/express.js"
-},
-
+    "dev": "nodemon src/express.js",
+    "start": "node src/express.js",
+    "build": "echo \"no build step\"",
+    "postinstall": "prisma generate",
+    "migrate": "prisma migrate deploy"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "@prisma/client": "^6.15.0",
     "cors": "^2.8.5",
